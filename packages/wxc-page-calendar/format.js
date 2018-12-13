@@ -44,8 +44,7 @@ export function _getTraditionalHoliday () {
 }
 
 export function _isDate (obj) {
-  const type = obj === null ? String(obj) : {}.toString.call(obj) || 'object';
-  return type === '[object date]';
+  return obj instanceof Date;
 }
 
 /**
